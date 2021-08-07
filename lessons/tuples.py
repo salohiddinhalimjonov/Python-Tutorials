@@ -63,8 +63,70 @@ print(thistuple)#('apple', 'banana', 'cherry', 'orange')
 #                                        --UNPACK TUPLES--
 
 
+
 #When we create a tuple, we normally assign values to it. This is called "packing" a tuple:
+fruits = ("apple", "banana", "cherry")
+(green, yellow, red) = fruits
+print(green)#apple
+print(yellow)#banana
+print(red)#cherry
+#If the number of variables is less than the number of values, you can add an * to the variable name and the values will be assigned to the variable as a list:
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+(green, yellow, *red) = fruits
+print(green)#apple
+print(yellow)#banana
+print(red)#['cherry', 'strawberry', 'raspberry']
+#If the asterisk is added to another variable name than the last, Python will assign values to the variable until the number of values left matches the number of variables left.
+fruits = ("apple", "mango", "papaya", "pineapple", "cherry")
+(green, *tropic, red) = fruits
+print(green)#apple
+print(tropic)#["mango", "papaya", "pineapple"]
+print(red)#cherry
+
+
+
 #                                        --LOOP TUPLES--
+
+
+
+#You can loop through the tuple items by using a for loop.
+thistuple = ("apple", "banana", "cherry")
+for x in thistuple:
+  print(x)#apple
+          #banana
+          #cherry
+
+thistuple = ("apple", "banana", "cherry")
+for i in range(len(thistuple)):
+  print(thistuple[i])#apple
+                     #banana
+                     # cherry         
+#You can loop through the list items by using a while loop.
+thistuple = ("apple", "banana", "cherry")
+i = 0
+while i < len(thistuple):
+  print(thistuple[i])
+  i = i + 1
+#apple
+#banana
+#cherry
+
+
+
 #                                        --JOIN TUPLES--
-#
-#
+
+
+
+#To join two or more tuples you can use the + operator:
+#Join two tuples:
+tuple1 = ("a", "b" , "c")
+tuple2 = (1, 2, 3)
+
+tuple3 = tuple1 + tuple2
+print(tuple3)#('a', 'b', 'c', 1, 2, 3)
+
+#If you want to multiply the content of a tuple a given number of times, you can use the * operator:
+fruits = ("apple", "banana", "cherry")
+mytuple = fruits * 2
+
+print(mytuple)#('apple', 'banana', 'cherry', 'apple', 'banana', 'cherry')
