@@ -57,7 +57,12 @@ y = ("orange",)
 thistuple += y
 print(thistuple)#('apple', 'banana', 'cherry', 'orange')
 
+
+
 #                                        --UNPACK TUPLES--
+
+
+#When we create a tuple, we normally assign values to it. This is called "packing" a tuple:
 #                                        --LOOP TUPLES--
 #                                        --JOIN TUPLES--
 #
