@@ -68,3 +68,12 @@ myfunc()
 print("Python is " + x)#Python is fantastic
 
 
+#Biror qiymatga nom berganda o'zgaruvchi hosil bo'ladi.O'zgaruchi nomi 1 ta tenglik va qiymat.Namuna: var = 123
+
+#Python dasturlash tilida o'zgaruvchilar turi ko'rsatilmaydi va o'zgaruvchini turini o'zgartirish mumkin.Namuna: a = 3; a = 'anor'; a = False vahokazo.
+
+#O'zgaruvchilar lotin harflari bilan boshlanadi va 2 belgidan keyin ostki chiziq yoki raqamlardan foydalanishingiz mumkin.Namuna: a123, AIR, en_ru
+
+#O'zgaruvchilar nomi birinchi belgisi raqam bilan boshlanishi yoki o'zgaruvchilar nomida simvollar ishtirok etishi mumkin emas.namuna: 123abc, bozor$
+
+#O'zgaruvchilar nomidagi katta va kichik harflar farq qiladi. Narx va narx boshqa boshqa o'zgaruvchi hisoblanadi.
