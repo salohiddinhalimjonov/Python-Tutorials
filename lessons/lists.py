@@ -63,6 +63,14 @@ print(fruits[1])# it returns 'banana'
 print(fruits[-3])# it returns 'fig'
 fruits1 = fruits[1:4]# it contains 'banana', 'peach', 'apricot'. Because fruits[1:4] means that 
 # give me elements of the list from 1st element to 4th one(4th element('berry') is not included. fruits[1:4] returns 1,2,3th elements of the list)
+#Quyida ko'rsatilgan misoldagi kabi(fruits[1:4]) listlar hech qachon reverse tartibda qiymatlarni chiqarmaydi.
+#Agar u quyidagi kabi bo'lsa(fruits[-4:-1]) ham. fruits[-1:-4] -> ushbu obyekt bo'sh list qaytaradi. Chunki u reverse tartibdagi qiymatlarni olmoqchi.
+#Faqat quyidagi holatdagina teskari qiymat olsa bo'ladi. Yani fruits[-1:-4:-1] ->ko'rib turganingizdek [-1:-4] reverse qiymat qaytaradi. agar u yolg'iz bo'lsa
+#ishlamaydi, lekin reverseni ifodalaydigan yana bir qiymat qo'shsak u ishlaydi. Yani birinchi qism([(-1:-4):-1]) reverse bo'lsa
+#ikkinchi qism[-1:-4:(-1)] ham reverse bo'lishi kerak.Misol: fruits[5:1:-1]result:orange, berry, apricot, peach.
+#  Agar birinchi qism reverse bo'lmasa ikkinchi qism ham reverse bo'lmasligi kerak. Shunda ushbu 
+#obyekt to'g'ri natija qaytaradi. Misol fruits[-5:-1:2] result: 5,7
+
 print(fruits1)
 fruits1 = fruits[:5]
 print(fruits1)# it returns from 0th element of the list to 5th one(5th element is not included)
@@ -88,6 +96,7 @@ fruits1 = fruits[-6:2:-1]
 print(fruits1)# it returns ['berry', 'apricot']
 fruits1 = fruits[::-2]
 print(fruits1)
+#
 
 
 
@@ -465,3 +474,25 @@ a[2:3] = []
 del a[0]
 print(a)
 #['bar', 'qux', 'quux', 'corge']
+
+
+
+#Searching index number of the list:
+
+
+
+cities = ['New York', 'Beijing', 'Cairo', 'Mumbai', 'Mexico']
+
+result = cities.index('Osaka')
+print(result)
+
+
+
+cities = ['New York', 'Beijing', 'Cairo', 'Mumbai', 'Mexico']
+city = 'Osaka'
+
+if city in cities:
+    result = cities.index(city)
+    print(f"The {city} has an index of {result}.")
+else:
+    print(f"{city} doesn't exist in the list.")
