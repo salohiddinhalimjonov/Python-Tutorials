@@ -291,14 +291,96 @@ txt = "Hello!\nAre you #1?"
 x = txt.isprintable()
 print(x)#False
 #isspace()	Returns True if all characters in the string are whitespaces
+#Check if all the characters in the text are whitespaces:
+txt = "   "
+x = txt.isspace()
+print(x)#True
+
+txt = "   s   "
+x = txt.isspace()
+print(x)#False
 #istitle()	Returns True if the string follows the rules of a title
+#The istitle() method returns True if all words in a text start with a upper case letter,
+#  AND the rest of the word are lower case letters, otherwise False.
+#Symbols and numbers are ignored.
+txt = "Hello, And Welcome To My World!"
+x = txt.istitle()
+print(x)#True
+
+a = "HELLO, AND WELCOME TO MY WORLD"
+b = "Hello"
+c = "22 Names"
+d = "This Is %'!?"
+
+print(a.istitle())#False
+print(b.istitle())#True
+print(c.istitle())#True
+print(d.istitle())#True
 #isupper()	Returns True if all characters in the string are upper case
+#Numbers, symbols and spaces are not checked, only alphabet characters
+txt = "THIS IS NOW!"
+x = txt.isupper()
+print(x)#True
+
+a = "Hello World!"
+b = "hello 123"
+c = "MY NAME IS PETER"
+
+print(a.isupper())#False
+print(b.isupper())#False
+print(c.isupper())#True
 #join()	Joins the elements of an iterable to the end of the string
+myTuple = ("John", "Peter", "Vicky")
+x = "#".join(myTuple)
+print(x)#John#Peter#Vicky
+
+myDict = {"name": "John", "country": "Norway", "countries": "Norway"}
+mySeparator = "TEST"
+x = mySeparator.join(myDict)
+print(x)#nameTESTcountryTESTcountries
+
 #ljust()	Returns a left justified version of the string
+txt = "banana"
+x = txt.ljust(20)
+print(x, "is my favorite fruit.")#banana              is my favorite fruit.
+
+txt = "banana"
+x = txt.ljust(20, "O")
+print(x)#bananaOOOOOOOOOOOOOO
+
 #lower()	Converts a string into lower case
+txt = "Hello my FRIENDS"
+x = txt.lower()
+print(x)#hello my friends
+
+
 #lstrip()	Returns a left trim version of the string
+txt = "     banana     "
+x = txt.lstrip()
+print("of all fruits", x, "is my favorite")#of all fruits banana     is my favorite
+
+#Remove the leading characters:
+
+txt = ",,,,,ssaaww.....banana"
+x = txt.lstrip(",.asw")
+print(x)#banana
 #maketrans()	Returns a translation table to be used in translations
+txt = "Hello Sam!"
+mytable = txt.maketrans("S", "P")
+print(txt.translate(mytable))#Hello Pam!
+
 #partition()	Returns a tuple where the string is parted into three parts
+txt = "I could eat bananas all day"
+x = txt.partition("bananas")
+print(x)#('I could eat ', 'bananas', ' all day')
+
+txt = "I could eat bananas all day"
+x = txt.partition("apples")
+print(x)#('I could eat bananas all day', '', '')
+
+txt = "I like bananas"
+x = txt.replace("bananas", "apples")
+print(x)#I like apples
 #replace()	Returns a string where a specified value is replaced with a specified value
 #rfind()	Searches the string for a specified value and returns the last position of where it was found
 #rindex()	Searches the string for a specified value and returns the last position of where it was found
