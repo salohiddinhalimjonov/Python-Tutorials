@@ -15,7 +15,10 @@ command = ''
 
 while command.lower() != 'quit':
     command = input('>')
-    print(f"Echo: {command}")    
+    print(f"Echo: {command}")#Echo: quit
+print(command)#quit
+#If we change the values of variables inside conditions, loops the variable also changes outside the loops, conditions
+        
 
 
 
@@ -65,3 +68,34 @@ while i < 6:
   i += 1
 else:
   print("i is no longer less than 6")
+
+
+
+
+  basket = [
+    {'fruit': 'apple', 'qty': 20},
+    {'fruit': 'banana', 'qty': 30},
+    {'fruit': 'orange', 'qty': 10}
+]
+
+fruit = input('Enter a fruit:')
+
+index = 0
+found_it = False
+
+while index < len(basket):
+    item = basket[index]
+    # check the fruit name
+    if item['fruit'] == fruit:
+        found_it = True
+        print(f"The basket has {item['qty']} {item['fruit']}(s)")
+        break
+
+    index += 1
+
+if not found_it:
+    qty = int(input(f'Enter the qty for {fruit}:'))
+    basket.append({'fruit': fruit, 'qty': qty})
+    print(basket)
+
+
