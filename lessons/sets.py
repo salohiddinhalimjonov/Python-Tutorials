@@ -146,7 +146,210 @@ print(z)#{'google', 'banana', 'microsoft', 'cherry'}
 
 
 
+#Set Difference:
+#The Set type has a difference() method that returns the difference between two or more sets:
+#The difference between the two sets results in a new set that has elements from the first set which aren’t present in the second set.
+#In Python, you can use the set difference() method or set difference operator (-) to find the difference between sets.
 
+s1 = {'Python', 'Java', 'C++'}
+s2 = {'C#', 'Java', 'C++'}
+s = s1.difference(s2)
+
+print(s)#{'Python'}
+
+
+s1 = {'Python', 'Java', 'C++'}
+s2 = {'C#', 'Java', 'C++'}
+s = s2.difference(s1)
+
+print(s)#{'C#'}
+
+
+s1 = {'Python', 'Java', 'C++'}
+s2 = {'C#', 'Java', 'C++'}
+s = s1 - s2
+
+print(s)#{'Python'}
+
+
+s1 = {'Python', 'Java', 'C++'}
+s2 = {'C#', 'Java', 'C++'}
+s = s2 - s1
+
+print(s)#{'C#'}
+
+#The set difference() method can accept one or more iterables 
+# (e.g., strings, lists, dictionaries) while the set difference operator (-) only allows sets.
+
+#The following shows how to use the set difference() method with a list:
+
+scores = {7, 8, 9}
+numbers = [9, 10]
+new_scores = scores.difference(numbers)
+
+print(new_scores)#{8,7}
+
+#However, if you use the set difference operator (-) with iterables, you’ll get an error
+
+
+#Symmetric Differences
+
+#The symmetric difference of two sets is a set of elements that are in either set, but not in their intersection.
+#The Set type has the symmetric_difference() method that returns the symmetric difference of two or more sets:
+
+s1 = {'Python', 'Java', 'C++'}
+s2 = {'C#', 'Java', 'C++'}
+s = s1.symmetric_difference(s2)
+print(s)#{'C#', 'Python'}
+
+#Using the symmetric difference operator(^) to find the symmetric difference of sets
+
+s1 = {'Python', 'Java', 'C++'}
+s2 = {'C#', 'Java', 'C++'}
+s = s1 ^ s2
+print(s)#{'Python', 'C#'}
+
+
+#The symmetric_difference() method accepts one or more iterables that can be strings, lists, or dictionaries.
+
+scores = {7, 8, 9}
+ratings = [8, 9, 10]
+new_set = scores.symmetric_difference(ratings)
+print(new_set)#{10, 7}
+
+#However, the symmetric difference operator (^) only applies to sets. 
+# If you use it with the iterables which aren’t sets, you’ll get an error.
+
+
+
+#Subset in Sets
+
+
+#Suppose that you have two sets A and B. The set A is a subset of the set B if all elements of A are also elements of B.
+#Then, the set B is a superset of the set A.
+#In Python, you can use the Set issubset() method to check if a set is a subset of another:
+
+numbers = {1, 2, 3, 4, 5}
+scores = {1, 2, 3}
+print(scores.issubset(numbers))#True
+
+#By definition, a set is also a subset of itself. The following example returns True:
+
+numbers = {1, 2, 3, 4, 5}
+print(numbers.issubset(numbers))#True
+
+#The following example returns True because some elements in the numbers set aren’t in the scores set. 
+# In other words, the numbers set is not a subset of the scores set:
+
+numbers = {1, 2, 3, 4, 5}
+scores = {1, 2, 3}
+print(numbers.issubset(scores))#False
+
+#Besides using the issubset() method, you can use subset operators (<=) to check if a set is a subset of another set:
+numbers = {1, 2, 3, 4, 5}
+scores = {1, 2, 3}
+
+result = scores <= numbers
+print(result)  # True
+
+result = numbers <= numbers
+print(result)  # True
+
+
+#The proper subset operator (<) check if the set_a is a proper subset of the set_b:
+
+numbers = {1, 2, 3, 4, 5}
+scores = {1, 2, 3}
+
+result = scores < numbers
+print(result)  # True
+#In this example, the set numbers are not a proper subset of itself, therefore, the < operator returns False.
+result = numbers < numbers
+print(result)  # False
+
+#Suppose that you have two sets: A and B. 
+#The set A is a superset of the set B if all elements of the set B are elements of the set A
+
+#If the set A is a superset of the set B, then the set B is a subset of the set A.
+#  To check if a set is a subset of another, you use the issubset() method.
+
+#If the set A and set B are not equal, the set A is a proper superset of the set B.
+#Logically, a set is a superset of itself.
+numbers = {1, 2, 3, 4, 5}
+scores = {1, 2, 3}
+result = numbers.issuperset(scores)
+print(result)#True
+
+numbers = {1, 2, 3, 4, 5}
+result = numbers.issuperset(numbers)
+print(result)#True
+
+
+numbers = {1, 2, 3, 4, 5}
+scores = {1, 2, 3}
+result = scores.issuperset(numbers)
+print(result)#False
+
+
+#The >= operator determines if a set is a superset of another set:
+
+numbers = {1, 2, 3, 4, 5}
+scores = {1, 2, 3}
+
+result = numbers >= scores
+print(result)  # True
+
+result = numbers >= numbers
+print(result)  # True
+
+
+#To check if a set is a proper superset of another set, you use the > operator:
+
+numbers = {1, 2, 3, 4, 5}
+scores = {1, 2, 3}
+
+result = numbers > scores
+print(result)  # True
+
+result = numbers > numbers
+print(result)  # False
+
+
+#If the values of two different variables are equal it will also be superset of var1
+numbers = {1, 2, 3}
+scores = {1, 2, 3}
+result = numbers.issuperset(scores)
+print(result)#True
+
+
+
+#Disjoint Sets
+
+
+#Two sets are disjoint when they have no elements in common. 
+#In other words, two disjoint sets are sets whose intersection is an empty set.
+
+odd_numbers = {1, 3, 5}
+even_numbers = {2, 4, 6}
+result = odd_numbers.isdisjoint(even_numbers)
+print(result)#True
+
+letters = {'A', 'B', 'C'}
+alphanumerics = {'A', 1, 2}
+
+result = letters.isdisjoint(alphanumerics)
+
+print(result)#False
+
+#The following example passes a list to the isdisjoint() method instead of a set:
+
+letters = {'A', 'B', 'C'}
+result = letters.isdisjoint([1, 2, 3])
+print(result)#True
+
+
+
+#                                       --SET COMPREHENSION--
 
 
 
