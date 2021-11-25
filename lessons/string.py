@@ -397,6 +397,27 @@ print(x)#I like apples
 #translate()	Returns a translated string
 #upper()	Converts a string into upper case
 #zfill()	Fills the string with a specified number of 0 values at the beginning
+#                            --Escape Characters in String--
+
+# \t  -   it is a tab
+print('Hello\tworld!')#Hello World!
+
+# \n  - it is a new line
+print("Hello\nWorld")#Hello
+                     #World!
+
+# \b  - it is a backspace
+print("Hello  \bWorld!")#Hello World!
+
+# \\  - backslash
+print("Hello\\World!")#Hello\World!
+
+# \r   - carriage return
+print("Hello\rWorld!")#Hello
+                      #World!
+# \a  -  Bell
+#  \v - vertical tab
+# \f  - form feed                      
 
  
 
