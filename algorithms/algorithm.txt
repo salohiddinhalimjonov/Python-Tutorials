@@ -1,0 +1,55 @@
+Algorithm is to devide a big problem into smaller ones and solve them step by step!
+Algoritmning samaradorligi uning tezligi va xotiradan qancha joy egallashi bilan belgilanadi!
+Algoritmlar asosan searching va sorting uchun ishlatiladi!
+
+List of Sorting algorithms:
+   Bubble sort
+   Selection sort
+   Merge sort
+   Quick sort
+   Heap sort
+   Bucket sort
+
+List of Searching algorithms:
+    Recursion
+    Linear search
+    Binary search
+    Jump search
+
+---- Foydalanuvchi kiritgan ikki sonni qo'shish algoritmi:
+1. Start
+2. son1, son2 va summa o'zgaruvchilarini belgilaymiz
+3. son1 va son2 qiymatlarini qabul qilamiz
+4. son1 va son2ni qo'shamiz, natijani summaga yuklaymiz:
+   summa = son1 + son2
+5. summani foydalanuvchiga qaytaramiz
+6. Stop
+
+----Uchta sondan eng kattasini topish algoritmi:
+1. Start
+2. a,b va c o'zgaruvchilarini belgilaymiz
+3. a,b va cga qiymatlar beramiz
+4. Agar a>b bo'lsa
+   agar a>c bo'lsa
+      a eng katta son2
+   aks holda 
+      c eng katta son   
+5. aks holda(yani a<b) bo'lsa
+   agar b>c bo'lsa
+      b eng katta son
+   aks holda
+      c eng katta son  
+6. Stop
+
+----N faktorialni hisoblash algoritmi   :
+1. Start          
+2. N, faktorial va i o'zgaruvchilarni belgilaymiz.
+3. faktorial va i ga 1 qiymatini yuklaymiz:
+    faktorial = 1, i = 1
+4. Foydalanuvchidan N qiymatini qabul qilamiz
+5. i=N bo'lgunga qadar quyidagi qadamlarni takrorlaymiz:
+  1. faktorial = faktorial * i 
+  2. i = i + 1
+6. faktorial qiymatinni qaytaramiz
+7. Stop  
+
