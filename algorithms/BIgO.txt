@@ -1,0 +1,10 @@
+BigO - Algortimning tezligini o'lchash uchun mezon!
+BigO - eng yomon holatdagi tezligni o'lchaydi!
+Big - katta
+O - operatsiyalar soni
+
+Linear Search uchun : O(n)
+Binary Search uchun : O(log2 N) Example :  log2 10 = 3 , yani Binary search algoritmi kerakli sonni 10 ta element ichidan eng ko'pi 3 ta operatsiya bilan topadi. 
+QuickSort Algorithm : O(n*log2 n)
+Slow sorting Algortihm : O(n ning kvadrati)
+Traveling salesperson : O(n!)

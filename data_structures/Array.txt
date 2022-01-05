@@ -1,0 +1,18 @@
+Array - bir turdagi ma'lumotlar(elementlar) uchun konteyner
+Har bir element aniq qiymatga ega: 'olma', -22, 'anvar@mail.ru'
+Har bir element o'zining indeksiga (tartib raqami) ega
+Elementlarga indeks orqali murojaat qilinadi
+Array xotirada yonma-yon joylashadi
+Arrayning boshiga bitta element qo'shmoqchi bo'lsak, arrayning har bir elementi o'ng tomonga
+bittadan siljitiladi va biz qo'shmoqchi bo'lgan element uchun array boshidan bitta bo'sh joy ajratadi,bu degani , biz qo'shmoqchi bo'lgan elementdan keyin
+nechta element bo'lsa , shuncha element bir marta o'ng tomonga suriladi va protsessor O(n) marta operatsiya bajaradi. O(n) - biz qo'shmoqchi bo'lgan elementdan keyingi 
+elementlar soni
+Arrayning ichidan bitta elementni indeksi orqali olmoqchi bo'lsak, protsessor maksimum bitta operatsiya bajaradi
+Misol uchun : list1 = [1,2,3]
+print(list1[2]) -> protsessorda bitta operatsiya bajarildi
+Agar biz listning o'rtasiga element qo'shmoqchi bo'lsak, 
+array protsessor ichidan ketma ket 4ta(len(list1)+1) element sig'adigan joy qidiradi.
+
+Xulosa:
+Array qulay - agar biz listdan ma'lumot olmoqchi(o'qimoqchi) bo'lsak
+Array noqulay - agar biz listga ma'lumot kiritmoqchi bo'lsak.

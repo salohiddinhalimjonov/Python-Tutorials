@@ -1,0 +1,37 @@
+Linked Lists - bu ketma-ketligi xotiradagi joylashuviga bog'liq
+bo'lmagan chiziqli ma'lumotlar to'plami. Yani har bir element
+xotiraning istalgan bo'sh joyida joylashgan bo'lishi mumkin. 
+Ro'yhatning har bir elementi keyingi elementgaa ishora qiladi. Yani bir element undan keyingi 
+elementning(u protsessorning qayerida joylashgan bo'lmasin) manzilini ham saqlaydi.
+Ma'lumotlar tuzilmasi sifatida LLni bir-biriga bog'langan tugunlar
+ko'rinishida tasavvur qilamiz.
+Har bir tugun o'z qiymatini va keyingi element manzilini saqlaydi.
+
+Xotirada LL elementlari har xil bo'sh joylarda joylashgan bo'ladi ||
+                                                                  \/
+____     ____     
+|A| |--> |B| |
+            ||
+            \/
+           ____
+           |C| |-->|None| 
+
+Bu yerda A turgan katakcha tugunning qiymatini keyingi bo'sh
+katakcha esa narigi tugunning manzilini saqlayapti. Qolganlari ham xuddi shu holatda.
+C qiymatiga ega tugun esa hech narsaning manzilini saqlagani yo'q. yani, None
+
+LL turlari:
+Singly Linked List - bir tomonlama ro'yxat.(yani har bir element o'zining qiymati va keyingi elementning manzilini saqlaydi, oxirgi elemen hech narsaning manzilini saqlamaydi)
+Circular Linked List - aylana ro'yhat(har bir element o'zining qiymati va keyingi elementning manzilini saqlaydi va oxirgi element birinchi elementning manzilini saqlaydi )
+Doubly Linked Lists - Ikki tomonlama ro'yxat(har bir element o'zidan avvalgi va keyingi elementning manzilini va o'zining qiymatini saqlaydi, 1chi element 
+o'zidan avvalgi hech narsani saqlamaydi,  va oxirgi element o'zidan keyingi hech narsani manzilini saqlamaydi)
+Xulosa: 
+Xotirada ko'p joy egallaydi(qiymat va keyingi elementning manzili)
+Xotiradan samarali foydalanadi.(yani, aga xotirada 20ta elementga joy bo'lsa, lekin menda 40ta element bo'lsa,
+men linked list orqali xotiraga faqat  Lning 20ta elementini olib kelishim mumkin. Arrayda esa bunday imkoniyat yo'q)
+LL elementlarni olish(o'qish) qiyin. Chunki bizda faqat birinchi elementning manzili ma'lum.
+6-elementni o'qish uchun esa har bir elementdan keyingisini manzilini olib chiqish kerak. Bu 6-elementgacha davom etadi
+Misol uchun: telefonda galareyadagi rasmlarni full screen qilib ko'rishda huddi shu proses amalga oshiriladi.Va bunda
+protsessor 6ta operatsiya bajaradi
+Lekin element o'chirish yoki qo'shish uchun atiga bitta operatsiya bajaradi
+
