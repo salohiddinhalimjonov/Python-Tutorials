@@ -8,3 +8,4 @@ Binary Search uchun : O(log2 N) Example :  log2 10 = 3 , yani Binary search algo
 QuickSort Algorithm : O(n*log2 n)
 Slow sorting Algortihm : O(n ning kvadrati)
 Traveling salesperson : O(n!)
+Selection Sort : O(n*n)

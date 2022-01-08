@@ -1,0 +1,49 @@
+Devide & Conquer - Bo'lib tashla, hukmronlik qil!
+
+1. Bazida muammolarga yechim ko'rinmaydi
+2.Yaxshi dasturchi muammo oldida yengilmaydi.
+3. Katta muammoni mayda muammolarga bo'lib olib, har bir muammoni alohida hal qiladi.
+5. Bu devide and conquer metodi deb ataladi.
+6. Devide and conquer metodi juda ko'p muammolarga yechim bo'lishi mumkin.
+7.Keyingi safar murakkab muammoga to'qnash kelganingizda shu metodni esga soling.
+
+Example:
+Tasavvur qiling siz fermersiz va sizda quyidagi yer maydoni bor
+Sizning vazifangiz maydonni bir nechta kvadratlarga bo'lish
+Kvadratlar imkon qadar katta bo'lishi kerakl
+Bu muammoni yechish uchun Devide and conquer metodini ko'ramiz
+Buning uchun biz rekursiyani esga olamiz
+Rekursiya ishlashi uchun bizga to'xtash sharti kerak
+Rekursiyaning har bir qadami bilan muammo kichrayib borishi kerak
+
+
+
+
+
+
+
+Another Example:
+Berilgan array elementlari yig'indisini hisoblang: [5,8,12,22]
+1.To'xtash shartini aniqlaymiz.
+2. To'xtash shartiga yetish uchun har qadamda muammoni 
+kichraytirish yo'lini topamiz.
+
+To'xtash shartini aniqlaymiz
+agar arrayda 1 ta element bo'lsa shu elementni qaytaramiz
+Agar arrayda element bo'lmasa O qaytaramiz
+
+
+To'xtash shartiga yetish uchun har qadamda muammoni kichraytirish yo'lini topamiz
+Har qadamda O ta elementdan iborat arrayga yaqinlashamiz.
+#Call stack
+def sum(x):
+    if not x:
+        return "hi"
+    elif len(x) == 1:
+        return x[0]
+    else:
+        
+        return x.pop(0) + sum(x)
+list1 = [1,2,5,7]
+sum1 = sum(list1)
+print(sum1)
