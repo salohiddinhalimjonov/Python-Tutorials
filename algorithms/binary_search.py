@@ -52,11 +52,11 @@ def BinarySearch(array, n, lower, higher):
         mid = (lower + higher)//2
         if array[mid] == n:
             return mid
-        elif array[mid] >= n:
+        elif array[mid] > n:
             return BinarySearch(array, n, lower, mid-1)
 
         else:
-            return BinarySearch(array, n, lower+1, higher)
+            return BinarySearch(array, n, mid+1, higher)
     return -1
 
 array = [1,3,5,9,11]
