@@ -16,9 +16,52 @@ Buning uchun biz rekursiyani esga olamiz
 Rekursiya ishlashi uchun bizga to'xtash sharti kerak
 Rekursiyaning har bir qadami bilan muammo kichrayib borishi kerak
 
+#Method1
+
+def devide_conquer(a,b):
+    list1 = []
+    while a!=b:
+        if a > b:
+            c = a//b
+            a-=c*b
+            while c > 0:
+                list1.append(b*b)
+                c -= 1
+            if a == 0:
+                break
+        elif b>a:
+            c = b//a
+            b-=c*a
+            while c>0:
+                list1.append(a*a)
+                c-=1
+            if b == 0:
+                break
+            
+    
+    return list1
+    
+print(len(devide_conquer(168,64))) 
+Result : [4096, 4096, 1600, 576, 256, 64, 64]       
 
 
+#Method2
 
+def devide_conquer(a,b):
+    while a!=b:
+        if a > b: 
+        
+            return 1 + devide_conquer(a-b,b)
+        
+        elif b>a:
+            return 1 + devide_conquer(a, b-a)
+        
+    if a==b:
+        return 1
+         
+        
+print(devide_conquer(168,64))
+Result : 7
 
 
 
