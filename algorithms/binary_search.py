@@ -60,7 +60,7 @@ def BinarySearch(array, n, lower, higher):
     return -1
 
 array = [1,3,5,9,11]
-n = 3
+n = 11
 algorithm1 = BinarySearch(array, n, 0, len(array)-1)
 if algorithm1 == -1:
     print("Object not found!")
